@@ -34,7 +34,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@vichdev/react-components",
+  "name": "@vichdev/react-utils",
   "author": "Victor Hugo",
   "devDependencies": {
     "@babel/cli": "^7.24.7",
@@ -70,10 +70,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vichdev/react-components.git"
+    "url": "git+https://github.com/vichdev/react-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/vichdev/react-components/issues"
+    "url": "https://github.com/vichdev/react-utils/issues"
   },
-  "homepage": "https://github.com/vichdev/react-components#readme"
+  "homepage": "https://github.com/vichdev/react-utils#readme"
 }
