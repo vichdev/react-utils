@@ -1,8 +1,10 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "files": [
-    "lib/**",
+    "components/**",
+    "utils/**",
+    "hooks/**",
     "README.md"
   ],
   "engines": {
@@ -14,8 +16,11 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
-    "build": "npm run clean && tsc && babel src --extensions \".ts,.tsx\" --out-dir lib --ignore \"**/*.d.ts\"",
-    "clean": "rimraf ./lib",
+    "build-components": "babel src --extensions \".ts,.tsx\" --out-dir lib --ignore \"**/*.d.ts\" --copy-files && cp -r lib/components ./components",
+    "build-utils": "babel src --extensions \".ts,.tsx\" --out-dir lib --ignore \"**/*.d.ts\" --copy-files && cp -r lib/utils ./utils",
+    "build-hooks": "babel src --extensions \".ts,.tsx\" --out-dir lib --ignore \"**/*.d.ts\" --copy-files && cp -r lib/hooks ./hooks",
+    "build": "npm run clean && tsc && npm run build-components && npm run build-hooks && npm run build-utils",
+    "clean": "rimraf ./lib && rimraf ./components && rimraf ./hooks && rimraf ./utils",
     "major": "npm version major && npm publish",
     "minor": "npm version minor && npm publish",
     "patch": "npm version patch && npm publish"

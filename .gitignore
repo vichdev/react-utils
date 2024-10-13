@@ -3,4 +3,11 @@
 node_modules
 .cache
 dist
-lib
+
+
+
+## Lib files ##
+/lib
+/components
+/hooks
+/utils
